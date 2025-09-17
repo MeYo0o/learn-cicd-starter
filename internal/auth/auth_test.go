@@ -16,10 +16,8 @@ func TestGetAPIKey(t *testing.T) {
 		{
 			name:       "success with ApiKey scheme",
 			authHeader: "ApiKey secret123",
-			// mocking a failure case for GitHub workflow actions to fail.
-			wantKey: "secret12345",
-			// wantKey: "secret123",
-			wantErr: nil,
+			wantKey:    "secret123",
+			wantErr:    nil,
 		},
 		{
 			name:       "missing Authorization header",
